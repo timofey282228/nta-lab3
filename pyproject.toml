@@ -7,9 +7,11 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+nta-lab1 = {git = "https://github.com/timofey282228/nta-lab1.git"}
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.4.2"
+pytest = "^8.2.0"
 
 [build-system]
 requires = ["poetry-core"]
