@@ -1,16 +1,17 @@
 import logging
+from math import exp, log2, log10
+from typing import Iterable
 
-from math import exp, log2
 from nta_lab1 import canonical, primes
 
 logger = logging.getLogger(__name__)
 
 
-def get_base(n: int, *, c: int = 3.38) -> list[int]:
+def get_base(n: int, *, c: float = 3.38) -> tuple[int]:
     if n == 1:
         return primes.primes[0]
 
-    B = c * exp(1 / 2 * (log2(n) * log2(log2(n))) ** 1 / 2)
+    B = c * exp(1 / 2 * (log10(n) * log10(log10(n))) ** 1 / 2)
 
     # TODO binsearch?)
     i = 0
@@ -21,11 +22,3 @@ def get_base(n: int, *, c: int = 3.38) -> list[int]:
 
     logger.warning("Had to use all small primes known")
     return primes.primes
-
-
-def is_smooth_over(a: int, b: set[int]):
-    c_a = set(canonical(a).keys())
-    return c_a.issubset(b)
-
-
-print()

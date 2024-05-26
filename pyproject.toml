@@ -8,6 +8,8 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 nta-lab1 = {git = "https://github.com/timofey282228/nta-lab1.git"}
+matplotlib = "^3.9.0"
+
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.4.2"
