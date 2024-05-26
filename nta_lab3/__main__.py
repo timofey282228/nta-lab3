@@ -19,7 +19,8 @@ def solver(args):
     assert pow(p[0], x, p[2]) == p[1], "WRONG"
 
     now = datetime.now()
-    print((then-now).microseconds)
+    print(now)
+    print((then-now).microseconds, "mcs")
 
 
 
