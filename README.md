@@ -19,5 +19,5 @@ docker run --rm -it timofey282228/nta-lab3 --help
 git clone https://github.com/timofey282228/nta-lab3.git
 cd nta-lab3
 poetry install
-poetry run python -m nta_lab2 --help
+poetry run python -m nta_lab3 --help
 ```
